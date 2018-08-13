@@ -28,14 +28,10 @@ export default class TodoList extends Component {
     }
   }
 
-  removeItem = (items) => {
-    let values = this.state.list;
-    values.splice(items, 1)
-    this.setState({
-      value: "",
-      list: values
-    });
-  }
+   removeItem = (itemIndex) =>{
+  itemIndex.target.parentNode.outerHTML = null
+
+}
 
   render() {
     return (
